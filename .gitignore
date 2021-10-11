@@ -23,4 +23,5 @@ JLinkLog.txt
 *.sct
 *.map
 *.Administrator
+*.tang
 *.uvopt
