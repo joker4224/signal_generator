@@ -1,12 +1,15 @@
 #include<reg52.h>
-
-sbit p16 = P1^6;
+#include "lcd1602.h"
 
 int main()
 {
-	p16 = 1;
+	LCD_Init();
+	LCD_Clear();
 	while(1)
 	{
-		
+		LCD_Write_Com(0x80);
+		delay(5);
+		LCD_Write_Data(0x41);
+		delay(5);
 	}
 }
