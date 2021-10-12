@@ -26,6 +26,6 @@ void LCD_Write_Com(unsigned char com); //1602的写命令函数
 void LCD_Write_Data(unsigned char Data); //1602的写数据函数
 void LCD_Clear(void); //1602 清除显示内容
 void LCD_Init(void); //1602 初始化
-
+void show_freq(uchar freq);//显示频率
 
 #endif

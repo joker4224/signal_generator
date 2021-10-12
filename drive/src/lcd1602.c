@@ -1,5 +1,5 @@
 #include <REGX52.H>
-#include<intrins.h>
+#include <intrins.h>
 #include "lcd1602.h"
 
 
@@ -107,4 +107,14 @@ void LCD_Init(void)
 	//delay(5); 
 	LCD_Write_Com(0x80);
 	//delay(5);
+}
+
+void show_freq(uchar freq)
+{
+	LCD_Write_Com(0x80+5);
+	LCD_Write_Data( freq / 100 + 0x30 );
+	LCD_Write_Data( freq / 10 % 10 + 0x30 );
+	LCD_Write_Data( freq % 10 + 0x30 );
+	LCD_Write_Data('H');
+	LCD_Write_Data('z');
 }
