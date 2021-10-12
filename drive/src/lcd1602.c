@@ -111,10 +111,22 @@ void LCD_Init(void)
 
 void show_freq(uchar freq)
 {
+	uchar freq_div[3];
+	uchar i;
+	for (i=0;i<3;i++)
+	{
+		uchar num=freq % 10;
+		freq_div[i]=num+'0';
+		freq /= 10;
+	}
+	for(i=2;i>-1 && freq_div[i]=='0' ; i-- )
+	{
+		freq_div[i]=' ';
+	}
 	LCD_Write_Com(0x80+5);
-	LCD_Write_Data( freq / 100 + 0x30 );
-	LCD_Write_Data( freq / 10 % 10 + 0x30 );
-	LCD_Write_Data( freq % 10 + 0x30 );
+	LCD_Write_Data( freq_div[2] );
+	LCD_Write_Data( freq_div[1] );
+	LCD_Write_Data(freq_div[0] );
 	LCD_Write_Data('H');
 	LCD_Write_Data('z');
 }
