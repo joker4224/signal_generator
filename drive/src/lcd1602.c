@@ -41,9 +41,9 @@ bit LCD_Check_Busy(void)
 	EN_CLR; 
 	_nop_(); 
 	EN_SET;
-	
-	//return (bit)(DataPort & 0x80);
-	return 0;
+	_nop_();
+	return (bit)(DataPort & 0x80);
+	//return 0;
 }
 
 /*
@@ -86,7 +86,7 @@ void LCD_Write_Data(unsigned char Data)
 void LCD_Clear(void) 
 { 
 	LCD_Write_Com(0x01); 
-	delay(5);
+	//delay(5);
 }
 
 /*
@@ -98,13 +98,13 @@ void LCD_Init(void)
 {
 	EN = 0;
 	LCD_Write_Com(0x38);    /*显示模式设置*/ 
-	delay(5); 
+	//delay(5); 
 	LCD_Write_Com(0x0E);    /*显示关闭*/ 
-	delay(5); 
+	//delay(5); 
 	LCD_Write_Com(0x06);    /*显示清屏*/ 
-	delay(5); 
+	//delay(5); 
 	LCD_Write_Com(0x01);    /*显示光标移动设置*/ 
-	delay(5); 
+	//delay(5); 
 	LCD_Write_Com(0x80);
-	delay(5);
+	//delay(5);
 }
