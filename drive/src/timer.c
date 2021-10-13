@@ -23,19 +23,21 @@ void timer_init()
 
 void timer0 () interrupt 1
 {
+		
 	TR0=0;
 	TR1=0;//定时器1关闭
-	
+	pwm= 1;
 	TH0=(65536-977)/256;
 	TL0=(65536-977)%256;//设置定时器0初值
 
 	TH1=(65536-sin_table[phase_counter])/256;
 	TL1=(65536-sin_table[phase_counter])%256;//设置定时器1初值
-	
+//	TH1=(65536-400)/256;
+//	TL1=(65536-400)%256;//设置定时器1初值
 	TR1=1;//定时器1启动
 	TR0=1;
 	
-	pwm= 1;
+
 	
 	if(phase_counter<1024-k)
 	{

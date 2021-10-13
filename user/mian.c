@@ -7,7 +7,7 @@ uchar k;
 uint phase_counter=0;
 int main()
 {
-	f=100;
+	f=1;
 	k=f;
 	LCD_Init();
 	LCD_Clear();
