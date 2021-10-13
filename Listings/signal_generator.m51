@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/13/2021  02:37:26  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/13/2021  12:22:25  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -41,25 +41,25 @@ LINK MAP OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
                     0017H     0004H                  *** GAP ***
             CODE    001BH     0003H     ABSOLUTE     
             CODE    001EH     0800H     UNIT         ?CO?TIMER
-            CODE    081EH     00CEH     UNIT         ?PR?TIMER0?TIMER
-            CODE    08ECH     00CEH     UNIT         ?C?LIB_CODE
-            CODE    09BAH     008CH     UNIT         ?C_C51STARTUP
-            CODE    0A46H     005FH     UNIT         ?PR?_SHOW_FREQ?LCD1602
-            CODE    0AA5H     0044H     UNIT         ?C?LDIV
-            CODE    0AE9H     0042H     UNIT         ?PR?INTERRUPT1?INTERRUPT
-            CODE    0B2BH     001EH     UNIT         ?PR?_DELAYMS?LCD1602
-            CODE    0B49H     001EH     UNIT         ?PR?_DELAY?LCD1602
-            CODE    0B67H     001BH     UNIT         ?PR?LCD_INIT?LCD1602
-            CODE    0B82H     0019H     UNIT         ?PR?MAIN?MIAN
-            CODE    0B9BH     0016H     UNIT         ?PR?TIMER_INIT?TIMER
-            CODE    0BB1H     0011H     UNIT         ?PR?LCD_CHECK_BUSY?LCD1602
-            CODE    0BC2H     0011H     UNIT         ?PR?_LCD_WRITE_COM?LCD1602
-            CODE    0BD3H     0011H     UNIT         ?PR?_LCD_WRITE_DATA?LCD1602
-            CODE    0BE4H     0005H     UNIT         ?PR?LCD_CLEAR?LCD1602
-            CODE    0BE9H     0005H     UNIT         ?PR?TIMER1?TIMER
+            CODE    081EH     00E9H     UNIT         ?PR?TIMER0?TIMER
+            CODE    0907H     00CEH     UNIT         ?C?LIB_CODE
+            CODE    09D5H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0A61H     005FH     UNIT         ?PR?_SHOW_FREQ?LCD1602
+            CODE    0AC0H     0044H     UNIT         ?C?LDIV
+            CODE    0B04H     0042H     UNIT         ?PR?INTERRUPT1?INTERRUPT
+            CODE    0B46H     001EH     UNIT         ?PR?_DELAYMS?LCD1602
+            CODE    0B64H     001EH     UNIT         ?PR?_DELAY?LCD1602
+            CODE    0B82H     001BH     UNIT         ?PR?LCD_INIT?LCD1602
+            CODE    0B9DH     0019H     UNIT         ?PR?MAIN?MIAN
+            CODE    0BB6H     0016H     UNIT         ?PR?TIMER_INIT?TIMER
+            CODE    0BCCH     0011H     UNIT         ?PR?LCD_CHECK_BUSY?LCD1602
+            CODE    0BDDH     0011H     UNIT         ?PR?_LCD_WRITE_COM?LCD1602
+            CODE    0BEEH     0011H     UNIT         ?PR?_LCD_WRITE_DATA?LCD1602
+            CODE    0BFFH     0005H     UNIT         ?PR?LCD_CLEAR?LCD1602
+            CODE    0C04H     0005H     UNIT         ?PR?TIMER1?TIMER
 
 
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  02:37:26  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  12:22:25  PAGE 2
 
 
 
@@ -114,12 +114,12 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   ----------------------------------
 
   -------         MODULE        ?C_STARTUP
-  C:09BAH         SEGMENT       ?C_C51STARTUP
+  C:09D5H         SEGMENT       ?C_C51STARTUP
   I:0014H         SEGMENT       ?STACK
   C:0000H         PUBLIC        ?C_STARTUP
   D:00E0H         SYMBOL        ACC
   D:00F0H         SYMBOL        B
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  02:37:26  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  12:22:25  PAGE 3
 
 
   D:0083H         SYMBOL        DPH
@@ -127,7 +127,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   N:0000H         SYMBOL        IBPSTACK
   N:0100H         SYMBOL        IBPSTACKTOP
   N:0080H         SYMBOL        IDATALEN
-  C:09BDH         SYMBOL        IDATALOOP
+  C:09D8H         SYMBOL        IDATALOOP
   N:0000H         SYMBOL        PBPSTACK
   N:0100H         SYMBOL        PBPSTACKTOP
   N:0000H         SYMBOL        PDATALEN
@@ -136,18 +136,18 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   N:0000H         SYMBOL        PPAGEENABLE
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
-  C:09BAH         SYMBOL        STARTUP1
+  C:09D5H         SYMBOL        STARTUP1
   N:0000H         SYMBOL        XBPSTACK
   N:0000H         SYMBOL        XBPSTACKTOP
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         126
-  C:09BAH         LINE#         133
-  C:09BCH         LINE#         134
-  C:09BDH         LINE#         135
-  C:09BEH         LINE#         136
-  C:09C0H         LINE#         185
-  C:09C3H         LINE#         196
+  C:09D5H         LINE#         133
+  C:09D7H         LINE#         134
+  C:09D8H         LINE#         135
+  C:09D9H         LINE#         136
+  C:09DBH         LINE#         185
+  C:09DEH         LINE#         196
   -------         ENDMOD        ?C_STARTUP
 
   -------         MODULE        MIAN
@@ -157,7 +157,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:0B82H         PUBLIC        main
+  C:0B9DH         PUBLIC        main
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:0010H         PUBLIC        f
@@ -166,20 +166,20 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:0012H         PUBLIC        phase_counter
   D:00D0H         PUBLIC        PSW
   -------         PROC          MAIN
-  C:0B82H         LINE#         8
-  C:0B82H         LINE#         9
-  C:0B82H         LINE#         10
-  C:0B85H         LINE#         11
-  C:0B88H         LINE#         12
-  C:0B8BH         LINE#         13
-  C:0B8EH         LINE#         14
-  C:0B93H         LINE#         15
-  C:0B96H         LINE#         16
-  C:0B99H         LINE#         18
-  C:0B99H         LINE#         19
-  C:0B99H         LINE#         21
+  C:0B9DH         LINE#         8
+  C:0B9DH         LINE#         9
+  C:0B9DH         LINE#         10
+  C:0BA0H         LINE#         11
+  C:0BA3H         LINE#         12
+  C:0BA6H         LINE#         13
+  C:0BA9H         LINE#         14
+  C:0BAEH         LINE#         15
+  C:0BB1H         LINE#         16
+  C:0BB4H         LINE#         18
+  C:0BB4H         LINE#         19
+  C:0BB4H         LINE#         21
   -------         ENDPROC       MAIN
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  02:37:26  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  12:22:25  PAGE 4
 
 
   -------         ENDMOD        MIAN
@@ -188,28 +188,28 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0080H         PUBLIC        P0
   D:00A0H         PUBLIC        P2
-  C:0B49H         PUBLIC        _delay
+  C:0B64H         PUBLIC        _delay
   B:00A0H.2       PUBLIC        EN
-  C:0BB1H         PUBLIC        LCD_Check_Busy
-  C:0BE4H         PUBLIC        LCD_Clear
-  C:0BD3H         PUBLIC        _LCD_Write_Data
+  C:0BCCH         PUBLIC        LCD_Check_Busy
+  C:0BFFH         PUBLIC        LCD_Clear
+  C:0BEEH         PUBLIC        _LCD_Write_Data
   B:00A0H.0       PUBLIC        RS
   B:00A0H.1       PUBLIC        RW
-  C:0B2BH         PUBLIC        _DelayMs
-  C:0BC2H         PUBLIC        _LCD_Write_Com
-  C:0B67H         PUBLIC        LCD_Init
-  C:0A46H         PUBLIC        _show_freq
+  C:0B46H         PUBLIC        _DelayMs
+  C:0BDDH         PUBLIC        _LCD_Write_Com
+  C:0B82H         PUBLIC        LCD_Init
+  C:0A61H         PUBLIC        _show_freq
   -------         PROC          _DELAYMS
   D:0006H         SYMBOL        i
   -------         DO            
   D:0006H         SYMBOL        j
   D:0004H         SYMBOL        k
   -------         ENDDO         
-  C:0B2BH         LINE#         11
-  C:0B2BH         LINE#         12
-  C:0B2BH         LINE#         15
-  C:0B34H         LINE#         16
-  C:0B48H         LINE#         17
+  C:0B46H         LINE#         11
+  C:0B46H         LINE#         12
+  C:0B46H         LINE#         15
+  C:0B4FH         LINE#         16
+  C:0B63H         LINE#         17
   -------         ENDPROC       _DELAYMS
   -------         PROC          _DELAY
   D:0006H         SYMBOL        x
@@ -217,68 +217,68 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:0006H         SYMBOL        a
   D:0004H         SYMBOL        b
   -------         ENDDO         
-  C:0B49H         LINE#         24
-  C:0B49H         LINE#         25
-  C:0B49H         LINE#         27
-  C:0B52H         LINE#         28
-  C:0B66H         LINE#         29
+  C:0B64H         LINE#         24
+  C:0B64H         LINE#         25
+  C:0B64H         LINE#         27
+  C:0B6DH         LINE#         28
+  C:0B81H         LINE#         29
   -------         ENDPROC       _DELAY
   -------         PROC          LCD_CHECK_BUSY
-  C:0BB1H         LINE#         36
-  C:0BB1H         LINE#         37
-  C:0BB1H         LINE#         38
-  C:0BB4H         LINE#         39
-  C:0BB6H         LINE#         40
-  C:0BB8H         LINE#         41
-  C:0BBAH         LINE#         42
-  C:0BBBH         LINE#         43
-  C:0BBDH         LINE#         44
-  C:0BBEH         LINE#         45
-  C:0BC1H         LINE#         47
+  C:0BCCH         LINE#         36
+  C:0BCCH         LINE#         37
+  C:0BCCH         LINE#         38
+  C:0BCFH         LINE#         39
+  C:0BD1H         LINE#         40
+  C:0BD3H         LINE#         41
+  C:0BD5H         LINE#         42
+  C:0BD6H         LINE#         43
+  C:0BD8H         LINE#         44
+  C:0BD9H         LINE#         45
+  C:0BDCH         LINE#         47
   -------         ENDPROC       LCD_CHECK_BUSY
   -------         PROC          _LCD_WRITE_COM
   D:0007H         SYMBOL        com
-  C:0BC2H         LINE#         54
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  02:37:26  PAGE 5
+  C:0BDDH         LINE#         54
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  12:22:25  PAGE 5
 
 
-  C:0BC2H         LINE#         55
-  C:0BC2H         LINE#         56
-  C:0BC7H         LINE#         57
-  C:0BC9H         LINE#         58
-  C:0BCBH         LINE#         59
-  C:0BCDH         LINE#         60
-  C:0BCFH         LINE#         61
-  C:0BD0H         LINE#         62
-  C:0BD2H         LINE#         63
+  C:0BDDH         LINE#         55
+  C:0BDDH         LINE#         56
+  C:0BE2H         LINE#         57
+  C:0BE4H         LINE#         58
+  C:0BE6H         LINE#         59
+  C:0BE8H         LINE#         60
+  C:0BEAH         LINE#         61
+  C:0BEBH         LINE#         62
+  C:0BEDH         LINE#         63
   -------         ENDPROC       _LCD_WRITE_COM
   -------         PROC          _LCD_WRITE_DATA
   D:0007H         SYMBOL        Data
-  C:0BD3H         LINE#         70
-  C:0BD3H         LINE#         71
-  C:0BD3H         LINE#         72
-  C:0BD8H         LINE#         73
-  C:0BDAH         LINE#         74
-  C:0BDCH         LINE#         75
-  C:0BDEH         LINE#         76
-  C:0BE0H         LINE#         77
-  C:0BE1H         LINE#         78
-  C:0BE3H         LINE#         79
+  C:0BEEH         LINE#         70
+  C:0BEEH         LINE#         71
+  C:0BEEH         LINE#         72
+  C:0BF3H         LINE#         73
+  C:0BF5H         LINE#         74
+  C:0BF7H         LINE#         75
+  C:0BF9H         LINE#         76
+  C:0BFBH         LINE#         77
+  C:0BFCH         LINE#         78
+  C:0BFEH         LINE#         79
   -------         ENDPROC       _LCD_WRITE_DATA
   -------         PROC          LCD_CLEAR
-  C:0BE4H         LINE#         86
-  C:0BE4H         LINE#         87
-  C:0BE4H         LINE#         88
+  C:0BFFH         LINE#         86
+  C:0BFFH         LINE#         87
+  C:0BFFH         LINE#         88
   -------         ENDPROC       LCD_CLEAR
   -------         PROC          LCD_INIT
-  C:0B67H         LINE#         97
-  C:0B67H         LINE#         98
-  C:0B67H         LINE#         99
-  C:0B69H         LINE#         100
-  C:0B6EH         LINE#         102
-  C:0B73H         LINE#         104
-  C:0B78H         LINE#         106
-  C:0B7DH         LINE#         108
+  C:0B82H         LINE#         97
+  C:0B82H         LINE#         98
+  C:0B82H         LINE#         99
+  C:0B84H         LINE#         100
+  C:0B89H         LINE#         102
+  C:0B8EH         LINE#         104
+  C:0B93H         LINE#         106
+  C:0B98H         LINE#         108
   -------         ENDPROC       LCD_INIT
   -------         PROC          _SHOW_FREQ
   D:0007H         SYMBOL        freq
@@ -289,27 +289,27 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:000FH         SYMBOL        num
   -------         ENDDO         
   -------         ENDDO         
-  C:0A46H         LINE#         112
-  C:0A46H         LINE#         113
-  C:0A46H         LINE#         116
-  C:0A52H         LINE#         117
-  C:0A52H         LINE#         118
-  C:0A5AH         LINE#         119
-  C:0A65H         LINE#         120
-  C:0A6BH         LINE#         121
-  C:0A6EH         LINE#         122
-  C:0A82H         LINE#         123
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  02:37:26  PAGE 6
+  C:0A61H         LINE#         112
+  C:0A61H         LINE#         113
+  C:0A61H         LINE#         116
+  C:0A6DH         LINE#         117
+  C:0A6DH         LINE#         118
+  C:0A75H         LINE#         119
+  C:0A80H         LINE#         120
+  C:0A86H         LINE#         121
+  C:0A89H         LINE#         122
+  C:0A9DH         LINE#         123
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  12:22:25  PAGE 6
 
 
-  C:0A82H         LINE#         124
-  C:0A84H         LINE#         125
-  C:0A87H         LINE#         126
-  C:0A8CH         LINE#         127
-  C:0A91H         LINE#         128
-  C:0A96H         LINE#         129
-  C:0A9BH         LINE#         130
-  C:0AA0H         LINE#         131
+  C:0A9DH         LINE#         124
+  C:0A9FH         LINE#         125
+  C:0AA2H         LINE#         126
+  C:0AA7H         LINE#         127
+  C:0AACH         LINE#         128
+  C:0AB1H         LINE#         129
+  C:0AB6H         LINE#         130
+  C:0ABBH         LINE#         131
   -------         ENDPROC       _SHOW_FREQ
   -------         ENDMOD        LCD1602
 
@@ -322,7 +322,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:000EH         PUBLIC        interrupt_init
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:0AE9H         PUBLIC        interrupt1
+  C:0B04H         PUBLIC        interrupt1
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   B:00A8H.0       PUBLIC        EX0
@@ -340,11 +340,11 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:0016H         LINE#         12
   -------         ENDPROC       INTERRUPT_INIT
   -------         PROC          INTERRUPT1
-  C:0AE9H         LINE#         14
-  C:0B06H         LINE#         16
-  C:0B08H         LINE#         17
-  C:0B0BH         LINE#         18
-  C:0B10H         LINE#         19
+  C:0B04H         LINE#         14
+  C:0B21H         LINE#         16
+  C:0B23H         LINE#         17
+  C:0B26H         LINE#         18
+  C:0B2BH         LINE#         19
   -------         ENDPROC       INTERRUPT1
   -------         ENDMOD        INTERRUPT
 
@@ -359,10 +359,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
   C:001EH         PUBLIC        sin_table
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  02:37:26  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  12:22:25  PAGE 7
 
 
-  C:0B9BH         PUBLIC        timer_init
+  C:0BB6H         PUBLIC        timer_init
   B:00A8H.1       PUBLIC        ET0
   B:00A8H.3       PUBLIC        ET1
   D:008CH         PUBLIC        TH0
@@ -371,7 +371,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:008BH         PUBLIC        TL1
   C:081EH         PUBLIC        timer0
   B:00B8H.1       PUBLIC        PT0
-  C:0BE9H         PUBLIC        timer1
+  C:0C04H         PUBLIC        timer1
   B:0090H.0       PUBLIC        pwm
   B:00B8H.3       PUBLIC        PT1
   B:0088H.4       PUBLIC        TR0
@@ -379,18 +379,18 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          TIMER_INIT
-  C:0B9BH         LINE#         7
-  C:0B9BH         LINE#         8
-  C:0B9BH         LINE#         9
-  C:0B9EH         LINE#         10
-  C:0BA1H         LINE#         11
-  C:0BA4H         LINE#         15
-  C:0BA6H         LINE#         16
-  C:0BA8H         LINE#         17
-  C:0BAAH         LINE#         18
-  C:0BACH         LINE#         19
-  C:0BAEH         LINE#         20
-  C:0BB0H         LINE#         22
+  C:0BB6H         LINE#         7
+  C:0BB6H         LINE#         8
+  C:0BB6H         LINE#         9
+  C:0BB9H         LINE#         10
+  C:0BBCH         LINE#         11
+  C:0BBFH         LINE#         15
+  C:0BC1H         LINE#         16
+  C:0BC3H         LINE#         17
+  C:0BC5H         LINE#         18
+  C:0BC7H         LINE#         19
+  C:0BC9H         LINE#         20
+  C:0BCBH         LINE#         22
   -------         ENDPROC       TIMER_INIT
   -------         PROC          TIMER0
   C:081EH         LINE#         24
@@ -404,31 +404,31 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:08B3H         LINE#         36
   C:08B5H         LINE#         38
   C:08B7H         LINE#         40
-  C:08BEH         LINE#         41
-  C:08BEH         LINE#         42
-  C:08C9H         LINE#         43
-  C:08CBH         LINE#         45
-  C:08CBH         LINE#         46
-  C:08D1H         LINE#         47
-  C:08D1H         LINE#         50
+  C:08CCH         LINE#         41
+  C:08CCH         LINE#         42
+  C:08D6H         LINE#         43
+  C:08D8H         LINE#         45
+  C:08D8H         LINE#         46
+  C:08ECH         LINE#         47
+  C:08ECH         LINE#         50
   -------         ENDPROC       TIMER0
   -------         PROC          TIMER1
-  C:0BE9H         LINE#         51
-  C:0BE9H         LINE#         54
-  C:0BEBH         LINE#         55
-  C:0BEDH         LINE#         56
+  C:0C04H         LINE#         51
+  C:0C04H         LINE#         54
+  C:0C06H         LINE#         55
+  C:0C08H         LINE#         56
   -------         ENDPROC       TIMER1
   -------         ENDMOD        TIMER
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  02:37:26  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  12:22:25  PAGE 8
 
 
 
   -------         MODULE        ?C?SLDIV
-  C:0AA5H         PUBLIC        ?C?SLDIV
+  C:0AC0H         PUBLIC        ?C?SLDIV
   -------         ENDMOD        ?C?SLDIV
 
   -------         MODULE        ?C?ULDIV
-  C:0928H         PUBLIC        ?C?ULDIV
+  C:0943H         PUBLIC        ?C?ULDIV
   -------         ENDMOD        ?C?ULDIV
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
@@ -442,5 +442,5 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
     CALLER1: ?C_C51STARTUP
     CALLER2: ?PR?INTERRUPT1?INTERRUPT
 
-Program Size: data=21.0 xdata=0 code=3050
+Program Size: data=21.0 xdata=0 code=3077
 LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)
