@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/13/2021  14:22:41  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/13/2021  14:32:35  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
             CODE    0C30H     0011H     UNIT         ?PR?_LCD_WRITE_DATA?LCD1602
             CODE    0C41H     000FH     UNIT         ?PR?INTERRUPT_INIT?INTERRUPT
 
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:22:41  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:32:35  PAGE 2
 
 
 
@@ -119,7 +119,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   VALUE           TYPE          NAME
   ----------------------------------
 
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:22:41  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:32:35  PAGE 3
 
 
   -------         MODULE        ?C_STARTUP
@@ -179,7 +179,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:0BE5H         LINE#         12
   C:0BE8H         LINE#         13
   C:0BEBH         LINE#         14
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:22:41  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:32:35  PAGE 4
 
 
   C:0BF0H         LINE#         15
@@ -195,12 +195,12 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   D:0080H         PUBLIC        P0
   D:00A0H         PUBLIC        P2
   C:0BA6H         PUBLIC        _delay
-  B:00A0H.6       PUBLIC        EN
+  B:00A0H.2       PUBLIC        EN
   C:0C0EH         PUBLIC        LCD_Check_Busy
   C:000EH         PUBLIC        LCD_Clear
   C:0C30H         PUBLIC        _LCD_Write_Data
-  B:00A0H.4       PUBLIC        RS
-  B:00A0H.5       PUBLIC        RW
+  B:00A0H.0       PUBLIC        RS
+  B:00A0H.1       PUBLIC        RW
   C:0B88H         PUBLIC        _DelayMs
   C:0C1FH         PUBLIC        _LCD_Write_Com
   C:0BC4H         PUBLIC        LCD_Init
@@ -239,7 +239,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:0C17H         LINE#         42
   C:0C18H         LINE#         43
   C:0C1AH         LINE#         44
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:22:41  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:32:35  PAGE 5
 
 
   C:0C1BH         LINE#         45
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:0A61H         LINE#         113
   C:0A61H         LINE#         116
   C:0A6DH         LINE#         117
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:22:41  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:32:35  PAGE 6
 
 
   C:0A6DH         LINE#         118
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:0B26H         LINE#         24
   C:0B2BH         LINE#         25
   -------         ENDPROC       INTERRUPT0
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:22:41  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:32:35  PAGE 7
 
 
   -------         PROC          INTERRUPT1
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\signal_generator (?C_STARTUP)
   C:083FH         LINE#         29
   C:0842H         LINE#         30
   C:0845H         LINE#         32
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:22:41  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2021  14:32:35  PAGE 8
 
 
   C:087AH         LINE#         33

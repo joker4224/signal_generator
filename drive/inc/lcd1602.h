@@ -15,10 +15,13 @@
 
 #define DataPort P0
 
-sbit RS = P2^4;   //定义端口 
-sbit RW = P2^5;
-sbit EN = P2^6;
+//sbit RS = P2^4;   //定义端口 
+//sbit RW = P2^5;
+//sbit EN = P2^6;
 
+sbit RS = P2^0;   //定义端口 
+sbit RW = P2^1;
+sbit EN = P2^2;
 void DelayMs(unsigned int i);	//一个延时函数，这个函数在11.0592M晶振下的延时时间大概为1ms
 void delay(uint x);//延时
 bit LCD_Check_Busy(void); //1602的检查是否忙
