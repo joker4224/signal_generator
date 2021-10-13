@@ -1,14 +1,22 @@
 #include <reg52.h>
 #include "lcd1602.h"
 #include "interrupt.h"
-uchar f = 123;
+#include "timer.h"
+uchar f;
+uchar k;
+uint phase_counter=0;
 int main()
 {
-	interrupt_init();
+	f=1;
+	k=f;
 	LCD_Init();
 	LCD_Clear();
 	show_freq(f);
+	interrupt_init();
+	timer_init();
+	
 	while(1)
 	{
+
 	}
 }

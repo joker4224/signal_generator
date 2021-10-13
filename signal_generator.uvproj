@@ -386,6 +386,11 @@
               <FileType>1</FileType>
               <FilePath>.\drive\src\interrupt.c</FilePath>
             </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drive\src\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
