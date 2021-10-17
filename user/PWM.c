@@ -40,11 +40,11 @@ main()						 //m1:m0  00=标准；   01=推挽；   10=输入；   11=开漏输出
 	//TL1=0xfd;
 	TH1=0xdc;
 	TL1=0xdc;
-  	TMOD = 0X21; //设定定时器1为8位方式,T0为16位计数    
-	SCON = 0x50;  //8位波特率可变
-	PCON = 0X00; //波特率不加倍
-   	TR1=1;
-	ES=1;
+//  	TMOD = 0X21; //设定定时器1为8位方式,T0为16位计数    
+//	SCON = 0x50;  //8位波特率可变
+//	PCON = 0X00; //波特率不加倍
+//   	TR1=1;
+//	ES=1;串口中断
 	TH0=0;
 	TL0=0;
 	ET0=1;//开定时器0中断
@@ -58,8 +58,8 @@ main()						 //m1:m0  00=标准；   01=推挽；   10=输入；   11=开漏输出
 	CCAPM0 = 0X42;//设定PWM0输出
 	CCAP1H = 0X80;//初始化占空比为50%
 	CCAP1L = 0X80;
-	CCAPM1 = 0X42;//设定PWM0输出
-	//CCAPM1 = 0X00;//设定PWM1不输出
+	//CCAPM1 = 0X42;//设定PWM0输出
+	CCAPM1 = 0X00;//设定PWM1不输出
 	PCA_PWM0 = 0;
 	PCA_PWM1 = 0;
 	CR = 1;
@@ -76,7 +76,11 @@ main()						 //m1:m0  00=标准；   01=推挽；   10=输入；   11=开漏输出
 		}
 		for(i=0;i<256;i++)
 		{
-			sin_buf[2][i]=i;
+			sin_buf[2][i]=255-i;
+		}
+				for(i=0;i<256;i++)
+		{
+			sin_buf[3][i]=i>127? i*2:-2*(i-255);
 		}
 
 
@@ -85,7 +89,7 @@ main()						 //m1:m0  00=标准；   01=推挽；   10=输入；   11=开漏输出
 		//y=step/f
 		//y=229824.8767
 
-		f=100;
+		f=10;//初始频率
 		step=f*y;
 		//step=0x1000000;
 		//step=stepf;
@@ -109,36 +113,36 @@ main()						 //m1:m0  00=标准；   01=推挽；   10=输入；   11=开漏输出
 	{	
 					sum=sum+step;
 					addr_s=sum>>24;
-					CCAP0H=sin_buf[1][addr_s];					
+					CCAP0H=sin_buf[0][addr_s];					
 		  
 	}
 }
-void es_isp() interrupt 4	 using		2	 //13位计时中断
-{
-	//u8	temp;
-	if(RI)
-	{
-		RI=0;
-		es_buf[mn]=SBUF;
-		mn++;
-		TH0=0;
-		TR0=1;
-		//SBUF=f;
-		//step=f*y;
-		return;
-	}
-	if(TI)
-		TI=0;	
+//void es_isp() interrupt 4	 using		2	 //13位计时中断
+//{
+//	//u8	temp;
+//	if(RI)
+//	{
+//		RI=0;
+//		es_buf[mn]=SBUF;
+//		mn++;
+//		TH0=0;
+//		TR0=1;
+//		//SBUF=f;
+//		//step=f*y;
+//		return;
+//	}
+//	if(TI)
+//		TI=0;	
 
-}
+//}
 
-void t0_isp() interrupt 1	 using		3	 //16计位时中断
-{
-   TR0=0;
-   mn=0;
-   step=((u16)es_buf[0]+(u16)es_buf[1]*256)*y;
+//void t0_isp() interrupt 1	 using		3	 //16计位时中断
+//{
+//   TR0=0;
+//   mn=0;
+//   step=((u16)es_buf[0]+(u16)es_buf[1]*256)*y;
 
-}
+//}
 /*
  void pca_isp() interrupt 7	   //using	1	   //计时开始中断
 {
@@ -162,14 +166,15 @@ void int1_isp() interrupt 2		using		3		//计时结束中断
 void interrupt0() interrupt 0
 {
 	f=f+1;
+	if(f>100) f=1;
 	step=f*y;
 	show_freq(f);
-
 }
 
 void interrupt1() interrupt 2
 {
-	f=f-1;
+	f=f+10;
+	if(f>100) f=1;
 	step=f*y;
 	show_freq(f);
 }
