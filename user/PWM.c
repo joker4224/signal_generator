@@ -1,7 +1,7 @@
 //#include <reg51.h>
 #include <STC12C5A60S2.h>
-#include "lcd1602.h"
-#include "interrupt.h"
+#include "1602.h"
+
 #include "math.h"
 #define u8 unsigned char
 #define u16 unsigned   int 

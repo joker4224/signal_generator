@@ -7,8 +7,8 @@
   内容：
   引脚定义如下：1-VSS 2-VDD 3-V0 4-RS 5-R/W 6-E 7-14 DB0-DB7 15-BLA 16-BLK
 ------------------------------------------------*/
+#include <STC12C5A60S2.h>
 #include "1602.h"
-//#include "delay.h"
 
 sbit RS = P2^4;   //定义端口 
 sbit RW = P2^5;
