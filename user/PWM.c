@@ -7,7 +7,8 @@
 #define u16 unsigned   int 
 #define u32 unsigned long  int
 #define y    211524
-
+sbit key1=P3^2;
+sbit key2=P3^3;
 u8	addr_s,mn=0,f;
 u32	sum=0,step;
 u8	es_buf[10];
@@ -165,16 +166,24 @@ void int1_isp() interrupt 2		using		3		//计时结束中断
 */
 void interrupt0() interrupt 0
 {
-	f=f+1;
+	DelayMs(100);
+	if(key1==0)
+	{
+		f=f+1;
 	if(f>100) f=1;
 	step=f*y;
 	show_freq(f);
+	}
 }
 
 void interrupt1() interrupt 2
 {
-	f=f+10;
-	if(f>100) f=1;
-	step=f*y;
-	show_freq(f);
+	DelayMs(100);
+	if(key2==0)
+	{
+		f=f+10;
+		if(f>100) f=10;
+		step=f*y;
+		show_freq(f);
+	}
 }

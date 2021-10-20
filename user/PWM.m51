@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/17/2021  14:51:59  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/20/2021  13:54:30  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -57,19 +57,19 @@ LINK MAP OF MODULE:  ..\obj\PWM (?C_STARTUP)
             CODE    047BH     01C7H     UNIT         ?PR?MAIN?PWM
             CODE    0642H     016EH     UNIT         ?PR?SIN?SIN
             CODE    07B0H     008CH     UNIT         ?C_C51STARTUP
-            CODE    083CH     0067H     UNIT         ?PR?INTERRUPT1?PWM
-            CODE    08A3H     0065H     UNIT         ?PR?INTERRUPT0?PWM
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 2
+            CODE    083CH     0071H     UNIT         ?PR?INTERRUPT1?PWM
+            CODE    08ADH     006FH     UNIT         ?PR?INTERRUPT0?PWM
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 2
 
 
-            CODE    0908H     005FH     UNIT         ?PR?_SHOW_FREQ?1602
-            CODE    0967H     0024H     UNIT         ?PR?_LCD_WRITE_STRING?1602
-            CODE    098BH     0022H     UNIT         ?PR?LCD_INIT?1602
-            CODE    09ADH     001CH     UNIT         ?PR?_DELAYMS?1602
-            CODE    09C9H     0013H     UNIT         ?PR?_LCD_WRITE_COM?1602
-            CODE    09DCH     0013H     UNIT         ?PR?_LCD_WRITE_DATA?1602
-            CODE    09EFH     0010H     UNIT         ?PR?LCD_CHECK_BUSY?1602
-            CODE    09FFH     000AH     UNIT         ?PR?LCD_CLEAR?1602
+            CODE    091CH     005FH     UNIT         ?PR?_SHOW_FREQ?1602
+            CODE    097BH     0024H     UNIT         ?PR?_LCD_WRITE_STRING?1602
+            CODE    099FH     0022H     UNIT         ?PR?LCD_INIT?1602
+            CODE    09C1H     001CH     UNIT         ?PR?_DELAYMS?1602
+            CODE    09DDH     0013H     UNIT         ?PR?_LCD_WRITE_COM?1602
+            CODE    09F0H     0013H     UNIT         ?PR?_LCD_WRITE_DATA?1602
+            CODE    0A03H     0010H     UNIT         ?PR?LCD_CHECK_BUSY?1602
+            CODE    0A13H     000AH     UNIT         ?PR?LCD_CLEAR?1602
 
 
 
@@ -113,15 +113,17 @@ SEGMENT                               BIT_GROUP          DATA_GROUP
 *** NEW ROOT ***************************************************
 
 ?PR?INTERRUPT0?PWM                 -----    -----      -----    -----
+  +--> ?PR?_DELAYMS?1602
   +--> ?PR?_SHOW_FREQ?1602
 
 *** NEW ROOT ***************************************************
 
 ?PR?INTERRUPT1?PWM                 -----    -----      -----    -----
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 3
+
+
+  +--> ?PR?_DELAYMS?1602
   +--> ?PR?_SHOW_FREQ?1602
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 3
-
-
 
 
 
@@ -172,22 +174,23 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
   D:0091H         PUBLIC        P1M1
   D:0095H         PUBLIC        P2M1
   D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
   B:00A8H.7       PUBLIC        EA
   D:00F9H         PUBLIC        CH
   D:00A8H         PUBLIC        IE
   D:00E9H         PUBLIC        CL
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 4
+
+
   D:00FAH         PUBLIC        CCAP0H
   D:00FBH         PUBLIC        CCAP1H
   D:00EAH         PUBLIC        CCAP0L
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 4
-
-
   B:00D8H.6       PUBLIC        CR
   D:00EBH         PUBLIC        CCAP1L
   D:00DAH         PUBLIC        CCAPM0
   D:00DBH         PUBLIC        CCAPM1
   D:00B8H         PUBLIC        IP
-  C:08A3H         PUBLIC        interrupt0
+  C:08ADH         PUBLIC        interrupt0
   D:00D9H         PUBLIC        CMOD
   D:00D8H         PUBLIC        CCON
   C:083CH         PUBLIC        interrupt1
@@ -218,6 +221,8 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
   D:00A2H         PUBLIC        AUXR1
   D:002CH         PUBLIC        es_buf
   D:00D0H         PUBLIC        PSW
+  B:00B0H.2       PUBLIC        key1
+  B:00B0H.3       PUBLIC        key2
   D:0094H         PUBLIC        P0M0
   -------         PROC          MAIN
   -------         DO            
@@ -226,96 +231,104 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
   D:000CH         SYMBOL        sinv
   D:0010H         SYMBOL        sinv2
   -------         ENDDO         
-  C:047BH         LINE#         17
   C:047BH         LINE#         18
   C:047BH         LINE#         19
-  C:0480H         LINE#         20
-  C:0484H         LINE#         21
-  C:048CH         LINE#         22
-  C:0494H         LINE#         24
-  C:0496H         LINE#         25
-  C:0499H         LINE#         26
-  C:049BH         LINE#         27
-  C:049EH         LINE#         30
-  C:04A1H         LINE#         31
-  C:04A4H         LINE#         33
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 5
+  C:047BH         LINE#         20
+  C:0480H         LINE#         21
+  C:0484H         LINE#         22
+  C:048CH         LINE#         23
+  C:0494H         LINE#         25
+  C:0496H         LINE#         26
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 5
 
 
-  C:04A7H         LINE#         35
-  C:04AAH         LINE#         36
-  C:04ADH         LINE#         41
-  C:04B0H         LINE#         42
-  C:04B3H         LINE#         48
-  C:04B5H         LINE#         49
-  C:04B7H         LINE#         50
-  C:04B9H         LINE#         52
-  C:04BBH         LINE#         53
-  C:04BDH         LINE#         54
-  C:04BFH         LINE#         55
-  C:04C2H         LINE#         56
-  C:04C5H         LINE#         57
-  C:04C8H         LINE#         58
-  C:04CBH         LINE#         59
-  C:04CEH         LINE#         60
-  C:04D1H         LINE#         62
-  C:04D3H         LINE#         63
-  C:04D5H         LINE#         64
-  C:04D7H         LINE#         65
-  C:04D9H         LINE#         68
-  C:04DDH         LINE#         69
+  C:0499H         LINE#         27
+  C:049BH         LINE#         28
+  C:049EH         LINE#         31
+  C:04A1H         LINE#         32
+  C:04A4H         LINE#         34
+  C:04A7H         LINE#         36
+  C:04AAH         LINE#         37
+  C:04ADH         LINE#         42
+  C:04B0H         LINE#         43
+  C:04B3H         LINE#         49
+  C:04B5H         LINE#         50
+  C:04B7H         LINE#         51
+  C:04B9H         LINE#         53
+  C:04BBH         LINE#         54
+  C:04BDH         LINE#         55
+  C:04BFH         LINE#         56
+  C:04C2H         LINE#         57
+  C:04C5H         LINE#         58
+  C:04C8H         LINE#         59
+  C:04CBH         LINE#         60
+  C:04CEH         LINE#         61
+  C:04D1H         LINE#         63
+  C:04D3H         LINE#         64
+  C:04D5H         LINE#         65
+  C:04D7H         LINE#         66
+  C:04D9H         LINE#         69
   C:04DDH         LINE#         70
-  C:0501H         LINE#         71
-  C:0529H         LINE#         72
-  C:0538H         LINE#         73
-  C:053DH         LINE#         74
+  C:04DDH         LINE#         71
+  C:0501H         LINE#         72
+  C:0529H         LINE#         73
+  C:0538H         LINE#         74
   C:053DH         LINE#         75
-  C:055CH         LINE#         76
-  C:056CH         LINE#         77
-  C:0571H         LINE#         78
+  C:053DH         LINE#         76
+  C:055CH         LINE#         77
+  C:056CH         LINE#         78
   C:0571H         LINE#         79
-  C:0585H         LINE#         80
-  C:0595H         LINE#         81
-  C:059AH         LINE#         82
+  C:0571H         LINE#         80
+  C:0585H         LINE#         81
+  C:0595H         LINE#         82
   C:059AH         LINE#         83
-  C:05C9H         LINE#         84
-  C:05D9H         LINE#         92
-  C:05DCH         LINE#         93
-  C:05F4H         LINE#         99
-  C:05F6H         LINE#         100
-  C:05F8H         LINE#         102
-  C:05FAH         LINE#         103
-  C:05FCH         LINE#         105
-  C:05FEH         LINE#         106
-  C:0600H         LINE#         107
-  C:0603H         LINE#         108
-  C:0606H         LINE#         109
-  C:060BH         LINE#         111
-  C:060DH         LINE#         112
+  C:059AH         LINE#         84
+  C:05C9H         LINE#         85
+  C:05D9H         LINE#         93
+  C:05DCH         LINE#         94
+  C:05F4H         LINE#         100
+  C:05F6H         LINE#         101
+  C:05F8H         LINE#         103
+  C:05FAH         LINE#         104
+  C:05FCH         LINE#         106
+  C:05FEH         LINE#         107
+  C:0600H         LINE#         108
+  C:0603H         LINE#         109
+  C:0606H         LINE#         110
+  C:060BH         LINE#         112
   C:060DH         LINE#         113
   C:060DH         LINE#         114
-  C:0625H         LINE#         115
-  C:0633H         LINE#         116
-  C:0640H         LINE#         118
+  C:060DH         LINE#         115
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 6
+
+
+  C:0625H         LINE#         116
+  C:0633H         LINE#         117
+  C:0640H         LINE#         119
   -------         ENDPROC       MAIN
   -------         PROC          INTERRUPT0
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 6
-
-
-  C:08A3H         LINE#         166
-  C:08C0H         LINE#         168
-  C:08C2H         LINE#         169
-  C:08D0H         LINE#         170
-  C:08E8H         LINE#         171
-  C:08EDH         LINE#         173
+  C:08ADH         LINE#         167
+  C:08CAH         LINE#         169
+  C:08D1H         LINE#         170
+  C:08D4H         LINE#         171
+  C:08D4H         LINE#         172
+  C:08D6H         LINE#         173
+  C:08E4H         LINE#         174
+  C:08FCH         LINE#         175
+  C:0901H         LINE#         176
+  C:0901H         LINE#         177
   -------         ENDPROC       INTERRUPT0
   -------         PROC          INTERRUPT1
-  C:083CH         LINE#         175
-  C:0859H         LINE#         177
-  C:085FH         LINE#         178
-  C:086BH         LINE#         179
-  C:0883H         LINE#         180
-  C:0888H         LINE#         182
+  C:083CH         LINE#         179
+  C:0859H         LINE#         181
+  C:0860H         LINE#         182
+  C:0863H         LINE#         183
+  C:0863H         LINE#         184
+  C:0869H         LINE#         185
+  C:0875H         LINE#         186
+  C:088DH         LINE#         187
+  C:0892H         LINE#         188
+  C:0892H         LINE#         189
   -------         ENDPROC       INTERRUPT1
   -------         ENDMOD        PWM
 
@@ -326,19 +339,19 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
   D:00A8H         PUBLIC        IE
   B:00A0H.6       PUBLIC        EN
   D:00B8H         PUBLIC        IP
-  C:09EFH         PUBLIC        LCD_Check_Busy
-  C:0967H         PUBLIC        _LCD_Write_String
-  C:09FFH         PUBLIC        LCD_Clear
-  C:09DCH         PUBLIC        _LCD_Write_Data
+  C:0A03H         PUBLIC        LCD_Check_Busy
+  C:097BH         PUBLIC        _LCD_Write_String
+  C:0A13H         PUBLIC        LCD_Clear
+  C:09F0H         PUBLIC        _LCD_Write_Data
   D:00D8H         PUBLIC        CCON
   B:00A0H.4       PUBLIC        RS
   B:00A0H.5       PUBLIC        RW
-  C:09B4H         PUBLIC        _DelayMs
+  C:09C8H         PUBLIC        _DelayMs
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:09C9H         PUBLIC        _LCD_Write_Com
-  C:098BH         PUBLIC        LCD_Init
-  C:0908H         PUBLIC        _show_freq
+  C:09DDH         PUBLIC        _LCD_Write_Com
+  C:099FH         PUBLIC        LCD_Init
+  C:091CH         PUBLIC        _show_freq
   C:0010H         PUBLIC        _DelayUs2x
   D:00D0H         PUBLIC        PSW
   -------         PROC          _DELAYUS2X
@@ -346,110 +359,110 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
   C:0010H         LINE#         28
   C:0010H         LINE#         29
   C:0010H         LINE#         30
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 7
+
+
   C:0012H         LINE#         31
   -------         ENDPROC       _DELAYUS2X
-  C:09ADH         SYMBOL        L?0026
-  C:09AFH         SYMBOL        L?0027
+  C:09C1H         SYMBOL        L?0026
+  C:09C3H         SYMBOL        L?0027
   -------         PROC          L?0025
   -------         ENDPROC       L?0025
-  C:09ADH         SYMBOL        L?0026
-  C:09AFH         SYMBOL        L?0027
+  C:09C1H         SYMBOL        L?0026
+  C:09C3H         SYMBOL        L?0027
   -------         PROC          _DELAYMS
   D:0006H         SYMBOL        t
-  C:09B4H         LINE#         33
-  C:09B6H         LINE#         34
-  C:09B6H         LINE#         36
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 7
-
-
-  C:09BCH         LINE#         37
-  C:09BCH         LINE#         39
-  C:09C1H         LINE#         40
-  C:09C6H         LINE#         41
-  C:09C8H         LINE#         42
+  C:09C8H         LINE#         33
+  C:09CAH         LINE#         34
+  C:09CAH         LINE#         36
+  C:09D0H         LINE#         37
+  C:09D0H         LINE#         39
+  C:09D5H         LINE#         40
+  C:09DAH         LINE#         41
+  C:09DCH         LINE#         42
   -------         ENDPROC       _DELAYMS
   -------         PROC          LCD_CHECK_BUSY
-  C:09EFH         LINE#         46
-  C:09EFH         LINE#         47
-  C:09EFH         LINE#         48
-  C:09F2H         LINE#         49
-  C:09F4H         LINE#         50
-  C:09F6H         LINE#         51
-  C:09F8H         LINE#         52
-  C:09F9H         LINE#         53
-  C:09FBH         LINE#         54
-  C:09FEH         LINE#         55
+  C:0A03H         LINE#         46
+  C:0A03H         LINE#         47
+  C:0A03H         LINE#         48
+  C:0A06H         LINE#         49
+  C:0A08H         LINE#         50
+  C:0A0AH         LINE#         51
+  C:0A0CH         LINE#         52
+  C:0A0DH         LINE#         53
+  C:0A0FH         LINE#         54
+  C:0A12H         LINE#         55
   -------         ENDPROC       LCD_CHECK_BUSY
   -------         PROC          _LCD_WRITE_COM
   D:0005H         SYMBOL        com
-  C:09C9H         LINE#         59
-  C:09CBH         LINE#         60
-  C:09CBH         LINE#         62
-  C:09D0H         LINE#         63
-  C:09D2H         LINE#         64
-  C:09D4H         LINE#         65
-  C:09D6H         LINE#         66
-  C:09D8H         LINE#         67
-  C:09D9H         LINE#         68
-  C:09DBH         LINE#         69
+  C:09DDH         LINE#         59
+  C:09DFH         LINE#         60
+  C:09DFH         LINE#         62
+  C:09E4H         LINE#         63
+  C:09E6H         LINE#         64
+  C:09E8H         LINE#         65
+  C:09EAH         LINE#         66
+  C:09ECH         LINE#         67
+  C:09EDH         LINE#         68
+  C:09EFH         LINE#         69
   -------         ENDPROC       _LCD_WRITE_COM
   -------         PROC          _LCD_WRITE_DATA
   D:0005H         SYMBOL        Data
-  C:09DCH         LINE#         73
-  C:09DEH         LINE#         74
-  C:09DEH         LINE#         76
-  C:09E3H         LINE#         77
-  C:09E5H         LINE#         78
-  C:09E7H         LINE#         79
-  C:09E9H         LINE#         80
-  C:09EBH         LINE#         81
-  C:09ECH         LINE#         82
-  C:09EEH         LINE#         83
+  C:09F0H         LINE#         73
+  C:09F2H         LINE#         74
+  C:09F2H         LINE#         76
+  C:09F7H         LINE#         77
+  C:09F9H         LINE#         78
+  C:09FBH         LINE#         79
+  C:09FDH         LINE#         80
+  C:09FFH         LINE#         81
+  C:0A00H         LINE#         82
+  C:0A02H         LINE#         83
   -------         ENDPROC       _LCD_WRITE_DATA
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 8
+
+
   -------         PROC          LCD_CLEAR
-  C:09FFH         LINE#         88
-  C:09FFH         LINE#         89
-  C:09FFH         LINE#         90
-  C:0A04H         LINE#         91
+  C:0A13H         LINE#         88
+  C:0A13H         LINE#         89
+  C:0A13H         LINE#         90
+  C:0A18H         LINE#         91
   -------         ENDPROC       LCD_CLEAR
   -------         PROC          _LCD_WRITE_STRING
   D:0006H         SYMBOL        x
   D:0005H         SYMBOL        y
   D:0001H         SYMBOL        s
-  C:0967H         LINE#         96
-  C:0969H         LINE#         97
-  C:0969H         LINE#         98
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 8
-
-
-  C:096CH         LINE#         99
-  C:096CH         LINE#         100
-  C:096FH         LINE#         101
-  C:0971H         LINE#         103
-  C:0971H         LINE#         104
-  C:0978H         LINE#         105
-  C:0978H         LINE#         106
-  C:097EH         LINE#         107
-  C:097EH         LINE#         108
-  C:0981H         LINE#         109
-  C:0988H         LINE#         110
-  C:098AH         LINE#         111
+  C:097BH         LINE#         96
+  C:097DH         LINE#         97
+  C:097DH         LINE#         98
+  C:0980H         LINE#         99
+  C:0980H         LINE#         100
+  C:0983H         LINE#         101
+  C:0985H         LINE#         103
+  C:0985H         LINE#         104
+  C:098CH         LINE#         105
+  C:098CH         LINE#         106
+  C:0992H         LINE#         107
+  C:0992H         LINE#         108
+  C:0995H         LINE#         109
+  C:099CH         LINE#         110
+  C:099EH         LINE#         111
   -------         ENDPROC       _LCD_WRITE_STRING
   -------         PROC          LCD_INIT
-  C:098BH         LINE#         130
-  C:098BH         LINE#         131
-  C:098BH         LINE#         132
-  C:098BH         LINE#         133
-  C:098EH         LINE#         134
-  C:098EH         LINE#         135
-  C:0991H         LINE#         136
-  C:0991H         LINE#         137
-  C:0994H         LINE#         138
-  C:0999H         LINE#         139
-  C:099EH         LINE#         140
-  C:09A3H         LINE#         141
-  C:09A5H         LINE#         142
-  C:09A8H         LINE#         143
+  C:099FH         LINE#         130
+  C:099FH         LINE#         131
+  C:099FH         LINE#         132
+  C:099FH         LINE#         133
+  C:09A2H         LINE#         134
+  C:09A2H         LINE#         135
+  C:09A5H         LINE#         136
+  C:09A5H         LINE#         137
+  C:09A8H         LINE#         138
+  C:09ADH         LINE#         139
+  C:09B2H         LINE#         140
+  C:09B7H         LINE#         141
+  C:09B9H         LINE#         142
+  C:09BCH         LINE#         143
   -------         ENDPROC       LCD_INIT
   -------         PROC          _SHOW_FREQ
   D:0007H         SYMBOL        freq
@@ -460,28 +473,28 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
   D:001FH         SYMBOL        num
   -------         ENDDO         
   -------         ENDDO         
-  C:0908H         LINE#         146
-  C:0908H         LINE#         147
-  C:0908H         LINE#         150
-  C:0914H         LINE#         151
-  C:0914H         LINE#         152
-  C:091CH         LINE#         153
-  C:0927H         LINE#         154
-  C:092DH         LINE#         155
-  C:0930H         LINE#         156
-  C:0944H         LINE#         157
-  C:0944H         LINE#         158
-  C:0946H         LINE#         159
-  C:0949H         LINE#         160
-  C:094EH         LINE#         161
-  C:0953H         LINE#         162
-  C:0958H         LINE#         163
-  C:095DH         LINE#         164
-  C:0962H         LINE#         165
+  C:091CH         LINE#         146
+  C:091CH         LINE#         147
+  C:091CH         LINE#         150
+  C:0928H         LINE#         151
+  C:0928H         LINE#         152
+  C:0930H         LINE#         153
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 9
+
+
+  C:093BH         LINE#         154
+  C:0941H         LINE#         155
+  C:0944H         LINE#         156
+  C:0958H         LINE#         157
+  C:0958H         LINE#         158
+  C:095AH         LINE#         159
+  C:095DH         LINE#         160
+  C:0962H         LINE#         161
+  C:0967H         LINE#         162
+  C:096CH         LINE#         163
+  C:0971H         LINE#         164
+  C:0976H         LINE#         165
   -------         ENDPROC       _SHOW_FREQ
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 9
-
-
   -------         ENDMOD        1602
 
   -------         MODULE        ?C?FPADD
@@ -526,6 +539,9 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
   -------         ENDMOD        ?C?LMUL
 
   -------         MODULE        ?C?LNEG
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/20/2021  13:54:30  PAGE 10
+
+
   C:043AH         PUBLIC        ?C?LNEG
   -------         ENDMOD        ?C?LNEG
 
@@ -539,9 +555,6 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
 
   -------         MODULE        ?C?LLDCODE0
   C:046BH         PUBLIC        ?C?LLDCODE0
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/17/2021  14:51:59  PAGE 10
-
-
   -------         ENDMOD        ?C?LLDCODE0
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
@@ -560,5 +573,5 @@ SYMBOL TABLE OF MODULE:  ..\obj\PWM (?C_STARTUP)
     CALLER1: ?PR?INTERRUPT0?PWM
     CALLER2: ?PR?INTERRUPT1?PWM
 
-Program Size: data=54.1 xdata=768 code=2569
+Program Size: data=54.1 xdata=768 code=2589
 LINK/LOCATE RUN COMPLETE.  4 WARNING(S),  0 ERROR(S)
