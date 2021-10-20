@@ -170,7 +170,8 @@ void interrupt0() interrupt 0
 	if(key1==0)
 	{
 		f=f+1;
-	if(f>100) f=1;
+	if(f%10==0) f=f-10;
+	if(f>110) f=1;
 	step=f*y;
 	show_freq(f);
 	}
@@ -182,7 +183,7 @@ void interrupt1() interrupt 2
 	if(key2==0)
 	{
 		f=f+10;
-		if(f>100) f=10;
+		if(f>100) f=1;
 		step=f*y;
 		show_freq(f);
 	}
